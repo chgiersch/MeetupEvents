@@ -14,6 +14,8 @@
 		0FC62A301A6DA2B000D5B2DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC62A2F1A6DA2B000D5B2DB /* Images.xcassets */; };
 		0FC62A331A6DA2B000D5B2DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FC62A311A6DA2B000D5B2DB /* LaunchScreen.xib */; };
 		0FC62A3F1A6DA2B000D5B2DB /* MeetupEventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC62A3E1A6DA2B000D5B2DB /* MeetupEventsTests.m */; };
+		7A1A60921A6DC24C006D028A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A60911A6DC24C006D028A /* DetailViewController.m */; };
+		7A1A60951A6DDAAE006D028A /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A60941A6DDAAE006D028A /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		0FC62A381A6DA2B000D5B2DB /* MeetupEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetupEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC62A3D1A6DA2B000D5B2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FC62A3E1A6DA2B000D5B2DB /* MeetupEventsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetupEventsTests.m; sourceTree = "<group>"; };
+		7A1A60901A6DC24C006D028A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7A1A60911A6DC24C006D028A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7A1A60931A6DDAAE006D028A /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		7A1A60941A6DDAAE006D028A /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +87,13 @@
 		0FC62A211A6DA2B000D5B2DB /* MeetupEvents */ = {
 			isa = PBXGroup;
 			children = (
-				0FC62A261A6DA2B000D5B2DB /* AppDelegate.h */,
-				0FC62A271A6DA2B000D5B2DB /* AppDelegate.m */,
+				0FC62A2C1A6DA2B000D5B2DB /* Main.storyboard */,
 				0FC62A291A6DA2B000D5B2DB /* RootViewController.h */,
 				0FC62A2A1A6DA2B000D5B2DB /* RootViewController.m */,
-				0FC62A2C1A6DA2B000D5B2DB /* Main.storyboard */,
+				7A1A60901A6DC24C006D028A /* DetailViewController.h */,
+				7A1A60911A6DC24C006D028A /* DetailViewController.m */,
+				7A1A60931A6DDAAE006D028A /* WebViewController.h */,
+				7A1A60941A6DDAAE006D028A /* WebViewController.m */,
 				0FC62A2F1A6DA2B000D5B2DB /* Images.xcassets */,
 				0FC62A311A6DA2B000D5B2DB /* LaunchScreen.xib */,
 				0FC62A221A6DA2B000D5B2DB /* Supporting Files */,
@@ -96,6 +104,8 @@
 		0FC62A221A6DA2B000D5B2DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0FC62A261A6DA2B000D5B2DB /* AppDelegate.h */,
+				0FC62A271A6DA2B000D5B2DB /* AppDelegate.m */,
 				0FC62A231A6DA2B000D5B2DB /* Info.plist */,
 				0FC62A241A6DA2B000D5B2DB /* main.m */,
 			);
@@ -220,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC62A2B1A6DA2B000D5B2DB /* RootViewController.m in Sources */,
+				7A1A60951A6DDAAE006D028A /* WebViewController.m in Sources */,
 				0FC62A281A6DA2B000D5B2DB /* AppDelegate.m in Sources */,
 				0FC62A251A6DA2B000D5B2DB /* main.m in Sources */,
+				7A1A60921A6DC24C006D028A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +424,7 @@
 				0FC62A441A6DA2B000D5B2DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FC62A451A6DA2B000D5B2DB /* Build configuration list for PBXNativeTarget "MeetupEventsTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				0FC62A471A6DA2B000D5B2DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

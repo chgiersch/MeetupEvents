@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DetailViewController.h"
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -15,6 +16,7 @@
 
 #pragma mark - Other
 @property NSArray *eventsArray;
+@property DetailViewController *detailvc;
 
 
 @end
@@ -64,16 +66,17 @@
     return self.eventsArray.count;
 }
 
-
-- (IBAction)onReloadButtonPressed:(UIBarButtonItem *)sender
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.tableView reloadData];
+    
+    self.detailvc.currentEvent = [self.eventsArray objectAtIndex:indexPath.row];
 }
 
 
-
-
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    self.detailvc = segue.destinationViewController;
+}
 
 
 
