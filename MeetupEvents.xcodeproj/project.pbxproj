@@ -16,6 +16,7 @@
 		0FC62A3F1A6DA2B000D5B2DB /* MeetupEventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC62A3E1A6DA2B000D5B2DB /* MeetupEventsTests.m */; };
 		7A1A60921A6DC24C006D028A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A60911A6DC24C006D028A /* DetailViewController.m */; };
 		7A1A60951A6DDAAE006D028A /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A60941A6DDAAE006D028A /* WebViewController.m */; };
+		7A1A60981A6DFCD0006D028A /* BioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A60971A6DFCD0006D028A /* BioViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		7A1A60911A6DC24C006D028A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7A1A60931A6DDAAE006D028A /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7A1A60941A6DDAAE006D028A /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		7A1A60961A6DFCD0006D028A /* BioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BioViewController.h; sourceTree = "<group>"; };
+		7A1A60971A6DFCD0006D028A /* BioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BioViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				7A1A60911A6DC24C006D028A /* DetailViewController.m */,
 				7A1A60931A6DDAAE006D028A /* WebViewController.h */,
 				7A1A60941A6DDAAE006D028A /* WebViewController.m */,
+				7A1A60961A6DFCD0006D028A /* BioViewController.h */,
+				7A1A60971A6DFCD0006D028A /* BioViewController.m */,
 				0FC62A2F1A6DA2B000D5B2DB /* Images.xcassets */,
 				0FC62A311A6DA2B000D5B2DB /* LaunchScreen.xib */,
 				0FC62A221A6DA2B000D5B2DB /* Supporting Files */,
@@ -234,6 +239,7 @@
 				0FC62A281A6DA2B000D5B2DB /* AppDelegate.m in Sources */,
 				0FC62A251A6DA2B000D5B2DB /* main.m in Sources */,
 				7A1A60921A6DC24C006D028A /* DetailViewController.m in Sources */,
+				7A1A60981A6DFCD0006D028A /* BioViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

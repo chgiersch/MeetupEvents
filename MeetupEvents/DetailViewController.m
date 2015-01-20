@@ -30,7 +30,7 @@
     self.rsvpCountLabel.text = [NSString stringWithFormat:@"RSVP: %@", self.currentEvent[@"yes_rsvp_count"]];
     self.eventTextField.text = self.currentEvent[@"description"];
     
-    NSString *eventID = @"219274630";
+    NSString *eventID = self.currentEvent[@"id"];
     
     NSString *newURL = [NSString stringWithFormat:@"https://api.meetup.com/2/event_comments.json?event_id=%@&key=4b233a3256c8384121330d4d1d39", eventID];
     
@@ -61,12 +61,8 @@
     cell.textLabel.text = comment[@"comment"];
 //    cell.textLabel.numberOfLines = 3;
     
-    
-    double baddate = comment[@"time"];
-    NSDate *test = [NSDate dateWithTimeIntervalSince1970:baddate];
-    
-    NSString *derp = [NSString stringWithFormat:@"%@ - %li", comment[@"member_name"], test];
-    cell.detailTextLabel.text = derp;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[comment[@"time"] integerValue]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", comment[@"member_name"], date];
 
     
     
