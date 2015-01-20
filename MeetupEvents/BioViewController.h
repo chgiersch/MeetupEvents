@@ -10,6 +10,6 @@
 
 @interface BioViewController : UIViewController
 
-@property NSDictionary *userBioDictionary;
+@property NSDictionary *bioDictionary;
 
 @end

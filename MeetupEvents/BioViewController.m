@@ -24,8 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.nameLabel.text = self.bioDictionary[@"name"];
+    
     
 }
+
 
 @end

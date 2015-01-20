@@ -40,8 +40,12 @@
      }];
 
 }
+
+
 - (IBAction)onSearchButtonPressed:(UIBarButtonItem *)sender
 {
+    
+    
     NSString *enteredText = self.textField.text;
     NSString *newURL = [NSString stringWithFormat:@"https://api.meetup.com/2/open_events.json?zip=60604&text=%@&time=,1w&key=4b233a3256c8384121330d4d1d39", enteredText];
     

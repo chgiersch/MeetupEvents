@@ -64,14 +64,42 @@
     return cell;
 }
 
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.commentsArray.count;
 }
 
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    self.bioVC.userBioDictionary = 
+    
+    NSDictionary *comment = [self.commentsArray objectAtIndex:indexPath.row];
+    NSNumber *memberID = comment[@"member_id"];
+    NSLog(@"%@", memberID);
+    
+    NSString *newURL = [NSString stringWithFormat:@"https://api.meetup.com/2/profiles.json?member_id=%@&key=4b233a3256c8384121330d4d1d39", memberID];
+    
+    NSURL *url = [NSURL URLWithString:newURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         
+         NSDictionary *test = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil] ;
+         NSArray *membersArrayToDictionary = test[@"results"];
+         //[[NSJSONSerialization JSONObjectWithData:data options:0 error:nil] objectForKey:@"results"];
+         NSLog(@"%lu", (unsigned long)membersArrayToDictionary.count);
+         //pass user bio to bio view controller
+         self.bioVC.bioDictionary = [membersArrayToDictionary objectAtIndex:indexPath.row];
+//         [self.bioVC viewDidLoad];
+         NSLog(@"fak");
+         
+     }];
+
+    
 }
 
 
