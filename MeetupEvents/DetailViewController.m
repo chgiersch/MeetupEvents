@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "WebViewController.h"
+#import "BioViewController.h"
 
 @interface DetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
@@ -16,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *eventTextField;
 @property (weak, nonatomic) IBOutlet UITableView *commentTableView;
 @property NSArray *commentsArray;
+@property BioViewController *bioVC;
+
 
 @end
 
@@ -50,23 +53,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell"];
-    
-    
-    
-    
+
     NSDictionary *comment = [self.commentsArray objectAtIndex:indexPath.row];
-    
-    //    NSLog(@"%lu", (unsigned long)self.eventsArray.count);
-    
     cell.textLabel.text = comment[@"comment"];
 //    cell.textLabel.numberOfLines = 3;
     
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:[comment[@"time"] integerValue]];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", comment[@"member_name"], date];
 
-    
-    
-    
     return cell;
 }
 
@@ -75,12 +69,29 @@
     return self.commentsArray.count;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    self.bioVC.userBioDictionary = 
+}
+
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    WebViewController *wvc = segue.destinationViewController;
-    wvc.linkToLoad = self.currentEvent[@"event_url"];
-
+    if ([segue.identifier isEqualToString:@"BioSegue"])
+    {
+        self.bioVC = segue.destinationViewController;
+    }
+    else if ([segue.identifier isEqualToString:@"WebSegue"])
+    {
+        WebViewController *wvc = segue.destinationViewController;
+        wvc.linkToLoad = self.currentEvent[@"event_url"];
+    }
+    else
+    {
+        // NOTHING
+    }
 }
 
 

@@ -230,7 +230,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="MRQ-1g-5ph" kind="show" id="sw0-Mv-51S"/>
+                                            <segue destination="MRQ-1g-5ph" kind="show" identifier="BioSegue" id="sw0-Mv-51S"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -334,7 +334,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNe-u5-MQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="bOD-E8-Iqw">
                     <connections>
-                        <segue destination="9qi-3j-p1Y" kind="show" id="HqV-d1-VrW"/>
+                        <segue destination="9qi-3j-p1Y" kind="show" identifier="WebSegue" id="HqV-d1-VrW"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -433,17 +433,17 @@
                                 <exclude reference="lJS-Hv-4Fz"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Znw-Qy-Hm6"/>
-                                <exclude reference="Zpo-Fl-MRc"/>
-                                <exclude reference="hx2-XJ-ROO"/>
+                                <exclude reference="RjH-35-8I5"/>
+                                <exclude reference="gaC-Sm-CGP"/>
                                 <exclude reference="84x-fE-ASG"/>
                                 <exclude reference="Bic-3v-W9t"/>
                                 <exclude reference="VI5-Zk-f3Q"/>
                                 <exclude reference="via-7V-IWW"/>
                                 <exclude reference="Tne-6q-88O"/>
                                 <exclude reference="d7k-lE-gy3"/>
-                                <exclude reference="RjH-35-8I5"/>
-                                <exclude reference="gaC-Sm-CGP"/>
+                                <exclude reference="Znw-Qy-Hm6"/>
+                                <exclude reference="Zpo-Fl-MRc"/>
+                                <exclude reference="hx2-XJ-ROO"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -453,17 +453,17 @@
                                 <include reference="lJS-Hv-4Fz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Znw-Qy-Hm6"/>
-                                <include reference="Zpo-Fl-MRc"/>
-                                <include reference="hx2-XJ-ROO"/>
+                                <include reference="RjH-35-8I5"/>
+                                <include reference="gaC-Sm-CGP"/>
                                 <include reference="84x-fE-ASG"/>
                                 <include reference="Bic-3v-W9t"/>
                                 <exclude reference="VI5-Zk-f3Q"/>
                                 <exclude reference="via-7V-IWW"/>
                                 <include reference="Tne-6q-88O"/>
                                 <include reference="d7k-lE-gy3"/>
-                                <include reference="RjH-35-8I5"/>
-                                <include reference="gaC-Sm-CGP"/>
+                                <include reference="Znw-Qy-Hm6"/>
+                                <include reference="Zpo-Fl-MRc"/>
+                                <include reference="hx2-XJ-ROO"/>
                             </mask>
                         </variation>
                     </view>
@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U2F-Dn-Bxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2643" y="-246"/>
+            <point key="canvasLocation" x="2917.5" y="-433"/>
         </scene>
         <!--Bio View Controller-->
         <scene sceneID="SRI-fa-3nh">
@@ -485,6 +485,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ebT-hd-ym2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WkL-hl-sX9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i3G-4J-hK0">
@@ -511,15 +512,6 @@
                                     <rect key="frame" x="239" y="187" width="88" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYw-OI-wf0">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="257" y="232" width="42" height="21"/>
-                                </variation>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-sj-ny9">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -539,6 +531,15 @@
                                     <rect key="frame" x="259" y="148" width="38" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYw-OI-wf0">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="246" y="231" width="65" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -546,9 +547,9 @@
                                 <exclude reference="i3G-4J-hK0"/>
                                 <exclude reference="JaB-Nx-R8t"/>
                                 <exclude reference="fKM-rh-fOF"/>
-                                <exclude reference="sYw-OI-wf0"/>
                                 <exclude reference="D0B-sj-ny9"/>
                                 <exclude reference="xGI-oi-FDQ"/>
+                                <exclude reference="sYw-OI-wf0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -556,16 +557,24 @@
                                 <include reference="i3G-4J-hK0"/>
                                 <include reference="JaB-Nx-R8t"/>
                                 <include reference="fKM-rh-fOF"/>
-                                <include reference="sYw-OI-wf0"/>
                                 <include reference="D0B-sj-ny9"/>
                                 <include reference="xGI-oi-FDQ"/>
+                                <include reference="sYw-OI-wf0"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bioTextField" destination="D0B-sj-ny9" id="XQT-pA-JN2"/>
+                        <outlet property="birthdayLabel" destination="sYw-OI-wf0" id="UK8-vx-jN8"/>
+                        <outlet property="hometownLabel" destination="fKM-rh-fOF" id="1KS-zv-xxb"/>
+                        <outlet property="imageView" destination="i3G-4J-hK0" id="oHD-bl-LfA"/>
+                        <outlet property="nameLabel" destination="JaB-Nx-R8t" id="1nv-YY-v21"/>
+                        <outlet property="sexLabel" destination="xGI-oi-FDQ" id="rlo-F1-dS2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAx-RQ-R46" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2643" y="447"/>
+            <point key="canvasLocation" x="2917.5" y="225"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EWZ-zh-F5u">
