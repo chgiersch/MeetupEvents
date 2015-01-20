@@ -199,6 +199,26 @@
                                     </mask>
                                 </variation>
                             </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="adK-x2-iKQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" id="lGc-VI-qrn">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lGc-VI-qrn" id="tGF-9q-usB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="411" width="400" height="189"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZaZ-cc-hWs" id="mmd-GB-sEp"/>
+                                    <outlet property="delegate" destination="ZaZ-cc-hWs" id="PHy-6R-d3i"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -227,6 +247,7 @@
                                 <exclude reference="irz-o9-a1Q"/>
                                 <exclude reference="Scq-kQ-rpU"/>
                                 <exclude reference="Y1B-ov-c96"/>
+                                <exclude reference="adK-x2-iKQ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="EB9-7I-3GB"/>
@@ -255,6 +276,7 @@
                                 <include reference="irz-o9-a1Q"/>
                                 <include reference="Scq-kQ-rpU"/>
                                 <include reference="Y1B-ov-c96"/>
+                                <include reference="adK-x2-iKQ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="EB9-7I-3GB"/>
