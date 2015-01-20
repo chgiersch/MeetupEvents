@@ -494,22 +494,13 @@
                                     <rect key="frame" x="31" y="109" width="150" height="150"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joe Schmoe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-Nx-R8t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joe Schmoe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-Nx-R8t">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="230" y="109" width="97" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batavia, WI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKM-rh-fOF">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="239" y="187" width="88" height="21"/>
+                                    <rect key="frame" x="189" y="109" width="195" height="21"/>
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0B-sj-ny9">
@@ -522,13 +513,13 @@
                                     <rect key="frame" x="16" y="267" width="368" height="181"/>
                                 </variation>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGI-oi-FDQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batavia, WI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKM-rh-fOF">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="259" y="148" width="38" height="21"/>
+                                    <rect key="frame" x="189" y="151" width="195" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYw-OI-wf0">
@@ -537,7 +528,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="246" y="231" width="65" height="21"/>
+                                    <rect key="frame" x="246" y="195" width="65" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -546,9 +537,8 @@
                             <mask key="subviews">
                                 <exclude reference="i3G-4J-hK0"/>
                                 <exclude reference="JaB-Nx-R8t"/>
-                                <exclude reference="fKM-rh-fOF"/>
                                 <exclude reference="D0B-sj-ny9"/>
-                                <exclude reference="xGI-oi-FDQ"/>
+                                <exclude reference="fKM-rh-fOF"/>
                                 <exclude reference="sYw-OI-wf0"/>
                             </mask>
                         </variation>
@@ -556,9 +546,8 @@
                             <mask key="subviews">
                                 <include reference="i3G-4J-hK0"/>
                                 <include reference="JaB-Nx-R8t"/>
-                                <include reference="fKM-rh-fOF"/>
                                 <include reference="D0B-sj-ny9"/>
-                                <include reference="xGI-oi-FDQ"/>
+                                <include reference="fKM-rh-fOF"/>
                                 <include reference="sYw-OI-wf0"/>
                             </mask>
                         </variation>
@@ -569,7 +558,6 @@
                         <outlet property="hometownLabel" destination="fKM-rh-fOF" id="1KS-zv-xxb"/>
                         <outlet property="imageView" destination="i3G-4J-hK0" id="oHD-bl-LfA"/>
                         <outlet property="nameLabel" destination="JaB-Nx-R8t" id="1nv-YY-v21"/>
-                        <outlet property="sexLabel" destination="xGI-oi-FDQ" id="rlo-F1-dS2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAx-RQ-R46" userLabel="First Responder" sceneMemberID="firstResponder"/>

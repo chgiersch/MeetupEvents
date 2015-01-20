@@ -12,4 +12,6 @@
 
 @property NSDictionary *bioDictionary;
 
+-(void)updateLabels;
+
 @end

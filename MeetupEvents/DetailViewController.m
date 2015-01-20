@@ -96,6 +96,11 @@
          self.bioVC.bioDictionary = [membersArrayToDictionary objectAtIndex:indexPath.row];
 //         [self.bioVC viewDidLoad];
          NSLog(@"fak");
+         NSLog([membersArrayToDictionary objectAtIndex:indexPath.row][@"name"]);
+         
+         
+         // bush league
+         [self.bioVC updateLabels];
          
      }];
 
