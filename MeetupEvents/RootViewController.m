@@ -9,10 +9,11 @@
 #import "RootViewController.h"
 #import "DetailViewController.h"
 
-@interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 #pragma mark - Connections
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 #pragma mark - Other
 @property NSArray *eventsArray;
@@ -37,8 +38,29 @@
          self.eventsArray = [[NSJSONSerialization JSONObjectWithData:data options:0 error:nil] objectForKey:@"results"];
          [self.tableView reloadData];
      }];
+
+}
+- (IBAction)onSearchButtonPressed:(UIBarButtonItem *)sender
+{
+    [self textFieldDidEndEditing:self.textField];
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSString *enteredText = textField.text;
+    NSString *newURL = [NSString stringWithFormat:@"https://api.meetup.com/2/open_events.json?zip=60604&text=%@&time=,1w&key=4b233a3256c8384121330d4d1d39", enteredText];
+
+    NSLog(newURL);
+    NSURL *url = [NSURL URLWithString:newURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         self.eventsArray = [[NSJSONSerialization JSONObjectWithData:data options:0 error:nil] objectForKey:@"results"];
+         [self.tableView reloadData];
+     }];
+
+}
 
 #pragma mark - Table View
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

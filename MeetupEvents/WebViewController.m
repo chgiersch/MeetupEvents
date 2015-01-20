@@ -9,6 +9,7 @@
 #import "WebViewController.h"
 
 @interface WebViewController () <UIWebViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UIWebView *myWebView;
 
@@ -28,13 +29,27 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    [self.spinner startAnimating];
+    self.spinner.hidden = false;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self.spinner stopAnimating];
+    self.spinner.hidden = true;
 }
+
+
+
+
+
+- (IBAction)onBackButtonPressed:(UIBarButtonItem *)sender
+{
+    [self.myWebView goBack];
+}
+- (IBAction)onForwardButtonPressed:(UIBarButtonItem *)sender
+{
+    [self.myWebView goForward];
+}
+
 
 
 @end

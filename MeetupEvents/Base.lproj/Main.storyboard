@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QEf-Kv-lBU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -73,14 +74,31 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Gaj-tu-eGq"/>
+                    <navigationItem key="navigationItem" id="Gaj-tu-eGq">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="lqi-tF-EAH">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <outlet property="delegate" destination="vXZ-lx-hvc" id="Aia-55-hHI"/>
+                            </connections>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="qh3-GC-Ku0">
+                            <connections>
+                                <action selector="onSearchButtonPressed:" destination="vXZ-lx-hvc" id="XBU-KP-gNy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ttj-iW-TlC" id="GUB-UO-Ou7"/>
+                        <outlet property="textField" destination="lqi-tF-EAH" id="LBh-6L-U9u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1227" y="-246"/>
+            <point key="canvasLocation" x="1252.5" y="-246"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="rTk-h3-ZOD">
@@ -91,6 +109,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YSO-90-Ykm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3yN-2p-Rcw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Startup Grind Chicago Startup Grind Chicago Startup Grind Chicago" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDS-nO-Agj">
@@ -210,9 +229,6 @@
                                 <exclude reference="Y1B-ov-c96"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3iC-5E-G5M"/>
-                                <exclude reference="DK7-2v-5ID"/>
-                                <exclude reference="GJy-d8-09U"/>
                                 <exclude reference="EB9-7I-3GB"/>
                                 <exclude reference="EnE-6P-Rns"/>
                                 <exclude reference="QcV-QR-f9H"/>
@@ -222,6 +238,9 @@
                                 <exclude reference="7Db-H7-FOI"/>
                                 <exclude reference="8BP-QZ-Vap"/>
                                 <exclude reference="gUf-Cv-pLQ"/>
+                                <exclude reference="3iC-5E-G5M"/>
+                                <exclude reference="DK7-2v-5ID"/>
+                                <exclude reference="GJy-d8-09U"/>
                                 <exclude reference="LrC-PJ-C8u"/>
                                 <exclude reference="P3x-4S-xUD"/>
                                 <exclude reference="lMY-ow-M2J"/>
@@ -238,9 +257,6 @@
                                 <include reference="Y1B-ov-c96"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3iC-5E-G5M"/>
-                                <include reference="DK7-2v-5ID"/>
-                                <include reference="GJy-d8-09U"/>
                                 <include reference="EB9-7I-3GB"/>
                                 <include reference="EnE-6P-Rns"/>
                                 <include reference="QcV-QR-f9H"/>
@@ -250,6 +266,9 @@
                                 <include reference="7Db-H7-FOI"/>
                                 <include reference="8BP-QZ-Vap"/>
                                 <exclude reference="gUf-Cv-pLQ"/>
+                                <include reference="3iC-5E-G5M"/>
+                                <include reference="DK7-2v-5ID"/>
+                                <include reference="GJy-d8-09U"/>
                                 <exclude reference="LrC-PJ-C8u"/>
                                 <exclude reference="P3x-4S-xUD"/>
                                 <include reference="lMY-ow-M2J"/>
@@ -284,18 +303,27 @@
                         <viewControllerLayoutGuide type="bottom" id="yMM-og-mlE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gjt-c4-1Ot">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8O-T8-LnJ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9qi-3j-p1Y" id="MVQ-DT-4cU"/>
+                                </connections>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-LS-PkA">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-LS-PkA">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="Pks-4c-9fa"/>
-                                    <constraint firstAttribute="height" constant="20" id="aJB-CE-MnS"/>
+                                    <constraint firstAttribute="width" constant="20" id="Pks-4c-9fa">
+                                        <variation key="widthClass=compact" constant="37"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="20" id="aJB-CE-MnS">
+                                        <variation key="widthClass=compact" constant="37"/>
+                                    </constraint>
                                 </constraints>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Pks-4c-9fa"/>
@@ -304,14 +332,42 @@
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="Pks-4c-9fa"/>
-                                        <include reference="aJB-CE-MnS"/>
+                                        <exclude reference="Pks-4c-9fa"/>
+                                        <exclude reference="aJB-CE-MnS"/>
                                     </mask>
                                 </variation>
                             </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-Hv-4Fz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="whh-C7-RJH">
+                                        <connections>
+                                            <action selector="onBackButtonPressed:" destination="9qi-3j-p1Y" id="n0Y-DV-w9v"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kmb-Nu-Vnk"/>
+                                    <barButtonItem style="plain" id="wMc-09-A5a">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zQR-mQ-vpD">
+                                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Forward">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <connections>
+                                            <action selector="onForwardButtonPressed:" destination="9qi-3j-p1Y" id="tQS-X5-Fjm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="pkg-LS-PkA" secondAttribute="centerY" id="84x-fE-ASG"/>
+                            <constraint firstAttribute="centerX" secondItem="pkg-LS-PkA" secondAttribute="centerX" id="Bic-3v-W9t"/>
                             <constraint firstAttribute="centerX" secondItem="pkg-LS-PkA" secondAttribute="centerX" id="VI5-Zk-f3Q"/>
                             <constraint firstItem="V8O-T8-LnJ" firstAttribute="top" secondItem="gjt-c4-1Ot" secondAttribute="top" id="Znw-Qy-Hm6"/>
                             <constraint firstItem="V8O-T8-LnJ" firstAttribute="leading" secondItem="gjt-c4-1Ot" secondAttribute="leading" id="Zpo-Fl-MRc"/>
@@ -323,11 +379,14 @@
                             <mask key="subviews">
                                 <exclude reference="V8O-T8-LnJ"/>
                                 <exclude reference="pkg-LS-PkA"/>
+                                <exclude reference="lJS-Hv-4Fz"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Znw-Qy-Hm6"/>
                                 <exclude reference="Zpo-Fl-MRc"/>
                                 <exclude reference="hx2-XJ-ROO"/>
+                                <exclude reference="84x-fE-ASG"/>
+                                <exclude reference="Bic-3v-W9t"/>
                                 <exclude reference="VI5-Zk-f3Q"/>
                                 <exclude reference="via-7V-IWW"/>
                                 <exclude reference="gaC-Sm-CGP"/>
@@ -337,13 +396,16 @@
                             <mask key="subviews">
                                 <include reference="V8O-T8-LnJ"/>
                                 <include reference="pkg-LS-PkA"/>
+                                <include reference="lJS-Hv-4Fz"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Znw-Qy-Hm6"/>
                                 <include reference="Zpo-Fl-MRc"/>
                                 <include reference="hx2-XJ-ROO"/>
-                                <include reference="VI5-Zk-f3Q"/>
-                                <include reference="via-7V-IWW"/>
+                                <include reference="84x-fE-ASG"/>
+                                <include reference="Bic-3v-W9t"/>
+                                <exclude reference="VI5-Zk-f3Q"/>
+                                <exclude reference="via-7V-IWW"/>
                                 <include reference="gaC-Sm-CGP"/>
                             </mask>
                         </variation>
